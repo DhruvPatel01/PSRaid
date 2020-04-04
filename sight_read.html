@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/piano.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://unpkg.com/vexflow/releases/vexflow-min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
+</head>
+<body>
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <div id="stave"></div>
+      </div>
+    </div>  
+    <div>
+        <div id="p-wrapper"> 
+          <ul id="piano">  
+            <li><div class="anchor" id="C2"></div></li> 
+            <li><div class="anchor" id="D2"></div><span id="C#2"></span></li> 
+            <li><div class="anchor" id="E2"></div><span id="D#2"></span></li> 
+            <li><div class="anchor" id="F2"></div></li> 
+            <li><div class="anchor" id="G2"></div><span id="F#2"></span></li> 
+            <li><div class="anchor" id="A2"></div><span id="G#2"></span></li> 
+            <li><div class="anchor" id="B2"></div><span id="A#2"></span></li>
+            <li><div class="anchor" id="C3"></div></li> 
+            <li><div class="anchor" id="D3"></div><span id="C#3"></span></li> 
+            <li><div class="anchor" id="E3"></div><span id="D#3"></span></li> 
+            <li><div class="anchor" id="F3"></div></li> 
+            <li><div class="anchor" id="G3"></div><span id="F#3"></span></li> 
+            <li><div class="anchor" id="A3"></div><span id="G#3"></span></li> 
+            <li><div class="anchor" id="B3"></div><span id="A#3"></span></li>  
+            <li><div class="anchor" id="C4"></div></li> 
+            <li><div class="anchor" id="D4"></div><span id="C#4"></span></li> 
+            <li><div class="anchor" id="E4"></div><span id="D#4"></span></li> 
+            <li><div class="anchor" id="F4"></div></li> 
+            <li><div class="anchor" id="G4"></div><span id="F#4"></span></li> 
+            <li><div class="anchor" id="A4"></div><span id="G#4"></span></li> 
+            <li><div class="anchor" id="B4"></div><span id="A#4"></span></li> 
+            <li><div class="anchor" id="C5"></div></li> 
+            <li><div class="anchor" id="D5"></div><span id="C#5"></span></li> 
+            <li><div class="anchor" id="E5"></div><span id="D#5"></span></li> 
+            <li><div class="anchor" id="F5"></div></li> 
+            <li><div class="anchor" id="G5"></div><span id="F#5"></span></li> 
+            <li><div class="anchor" id="A5"></div><span id="G#5"></span></li> 
+            <li><div class="anchor" id="B5"></div><span id="A#5"></span></li> 
+            <li><div class="anchor" id="C6"></div></li> 
+            <li><div class="anchor" id="D6"></div><span id="C#6"></span></li> 
+            <li><div class="anchor" id="E6"></div><span id="D#6"></span></li> 
+            <li><div class="anchor" id="F6"></div></li> 
+            <li><div class="anchor" id="G6"></div><span id="F#6"></span></li> 
+            <li><div class="anchor" id="A6"></div><span id="G#6"></span></li> 
+            <li><div class="anchor" id="B6"></div><span id="A#6"></span></li>  
+          </ul> 
+        </div>
+    </div>
+
+<script src="js/sight_read.js"></script>
+</body>
+</html>
