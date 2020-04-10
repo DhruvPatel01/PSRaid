@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <title>PSRaid</title>
     <link rel="stylesheet" href="css/piano.css">
+    <link rel="stylesheet" href="css/main.css">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -18,49 +16,62 @@
 <body>
   <div id="stave"></div>
   
-  <div>
+  <div id="keyboard-88">
+    
     <div id="p-wrapper"> 
       <ul id="piano">  
-        <li><div class="anchor" id="C2"></div></li> 
-        <li><div class="anchor" id="D2"></div><span id="C#2"></span></li> 
-        <li><div class="anchor" id="E2"></div><span id="D#2"></span></li> 
-        <li><div class="anchor" id="F2"></div></li> 
-        <li><div class="anchor" id="G2"></div><span id="F#2"></span></li> 
-        <li><div class="anchor" id="A2"></div><span id="G#2"></span></li> 
-        <li><div class="anchor" id="B2"></div><span id="A#2"></span></li>
-        <li><div class="anchor" id="C3"></div></li> 
-        <li><div class="anchor" id="D3"></div><span id="C#3"></span></li> 
-        <li><div class="anchor" id="E3"></div><span id="D#3"></span></li> 
-        <li><div class="anchor" id="F3"></div></li> 
-        <li><div class="anchor" id="G3"></div><span id="F#3"></span></li> 
-        <li><div class="anchor" id="A3"></div><span id="G#3"></span></li> 
-        <li><div class="anchor" id="B3"></div><span id="A#3"></span></li>  
-        <li><div class="anchor" id="C4"></div></li> 
-        <li><div class="anchor" id="D4"></div><span id="C#4"></span></li> 
-        <li><div class="anchor" id="E4"></div><span id="D#4"></span></li> 
-        <li><div class="anchor" id="F4"></div></li> 
-        <li><div class="anchor" id="G4"></div><span id="F#4"></span></li> 
-        <li><div class="anchor" id="A4"></div><span id="G#4"></span></li> 
-        <li><div class="anchor" id="B4"></div><span id="A#4"></span></li> 
-        <li><div class="anchor" id="C5"></div></li> 
-        <li><div class="anchor" id="D5"></div><span id="C#5"></span></li> 
-        <li><div class="anchor" id="E5"></div><span id="D#5"></span></li> 
-        <li><div class="anchor" id="F5"></div></li> 
-        <li><div class="anchor" id="G5"></div><span id="F#5"></span></li> 
-        <li><div class="anchor" id="A5"></div><span id="G#5"></span></li> 
-        <li><div class="anchor" id="B5"></div><span id="A#5"></span></li> 
-        <li><div class="anchor" id="C6"></div></li> 
-        <li><div class="anchor" id="D6"></div><span id="C#6"></span></li> 
-        <li><div class="anchor" id="E6"></div><span id="D#6"></span></li> 
-        <li><div class="anchor" id="F6"></div></li> 
-        <li><div class="anchor" id="G6"></div><span id="F#6"></span></li> 
-        <li><div class="anchor" id="A6"></div><span id="G#6"></span></li> 
-        <li><div class="anchor" id="B6"></div><span id="A#6"></span></li>  
+        <li><div class="anchor" data-key="C2"></div></li> 
+        <li><div class="anchor" data-key="D2"></div><span data-key="C#2"></span></li> 
+        <li><div class="anchor" data-key="E2"></div><span data-key="D#2"></span></li> 
+        <li><div class="anchor" data-key="F2"></div></li> 
+        <li><div class="anchor" data-key="G2"></div><span data-key="F#2"></span></li> 
+        <li><div class="anchor" data-key="A2"></div><span data-key="G#2"></span></li> 
+        <li><div class="anchor" data-key="B2"></div><span data-key="A#2"></span></li>
+        <li><div class="anchor" data-key="C3"></div></li> 
+        <li><div class="anchor" data-key="D3"></div><span data-key="C#3"></span></li> 
+        <li><div class="anchor" data-key="E3"></div><span data-key="D#3"></span></li> 
+        <li><div class="anchor" data-key="F3"></div></li> 
+        <li><div class="anchor" data-key="G3"></div><span data-key="F#3"></span></li> 
+        <li><div class="anchor" data-key="A3"></div><span data-key="G#3"></span></li> 
+        <li><div class="anchor" data-key="B3"></div><span data-key="A#3"></span></li>  
+        <li><div class="anchor" data-key="C4"></div></li> 
+        <li><div class="anchor" data-key="D4"></div><span data-key="C#4"></span></li> 
+        <li><div class="anchor" data-key="E4"></div><span data-key="D#4"></span></li> 
+        <li><div class="anchor" data-key="F4"></div></li> 
+        <li><div class="anchor" data-key="G4"></div><span data-key="F#4"></span></li> 
+        <li><div class="anchor" data-key="A4"></div><span data-key="G#4"></span></li> 
+        <li><div class="anchor" data-key="B4"></div><span data-key="A#4"></span></li> 
+        <li><div class="anchor" data-key="C5"></div></li> 
+        <li><div class="anchor" data-key="D5"></div><span data-key="C#5"></span></li> 
+        <li><div class="anchor" data-key="E5"></div><span data-key="D#5"></span></li> 
+        <li><div class="anchor" data-key="F5"></div></li> 
+        <li><div class="anchor" data-key="G5"></div><span data-key="F#5"></span></li> 
+        <li><div class="anchor" data-key="A5"></div><span data-key="G#5"></span></li> 
+        <li><div class="anchor" data-key="B5"></div><span data-key="A#5"></span></li> 
+        <li><div class="anchor" data-key="C6"></div></li> 
+        <li><div class="anchor" data-key="D6"></div><span data-key="C#6"></span></li> 
+        <li><div class="anchor" data-key="E6"></div><span data-key="D#6"></span></li> 
+        <li><div class="anchor" data-key="F6"></div></li> 
+        <li><div class="anchor" data-key="G6"></div><span data-key="F#6"></span></li> 
+        <li><div class="anchor" data-key="A6"></div><span data-key="G#6"></span></li> 
+        <li><div class="anchor" data-key="B6"></div><span data-key="A#6"></span></li>  
       </ul> 
     </div>
+  
   </div>
-  <div id="about">
-    <a href="https://github.com/DhruvPatel01/PSRaid">Github</a>
+  
+  <div id="simple_layout">
+    <div data-key="C">C</div>
+    <div data-key="D">D</div>
+    <div data-key="E">E</div>
+    <div data-key="F">F</div>
+    <div data-key="G">G</div>
+    <div data-key="A">A</div>
+    <div data-key="B">B</div>
+  </div>
+  <div id="config">
+    <a href="https://github.com/DhruvPatel01/PSRaid">Github</a></div>
+    <button id="start_recording">START AUDIO DETECTION</button>
   </div>
 <script src="js/sight_read.js"></script>
 </body>

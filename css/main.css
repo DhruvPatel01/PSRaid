@@ -1,0 +1,47 @@
+* { 
+    margin:0px; 
+    padding:0px; 
+    list-style:none; 
+} 
+
+:focus { 
+    outline:none !important; 
+}  
+
+@media (max-width: 700px) {
+    #keyboard-88 {
+        display: none;
+    }
+}
+
+#stave {
+    overflow: auto;
+}
+
+/* simple mobile friendly keyboard */
+#simple_layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#simple_layout div {
+    padding: 5px 20px;
+    font-size: 2em;
+    border: 3px solid rgba(50,50,50,.9);
+    border-radius: 5px;
+    margin:5px;
+    box-shadow: 3px 3px rgba(100,100,100,.5);
+    text-align: center;
+    max-width: 50px;
+    flex: 200px;
+}
+
+#simple_layout div:hover {
+    cursor: pointer;
+}
+
+#simple_layout div:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+    transition: linear 0.1s;
+}

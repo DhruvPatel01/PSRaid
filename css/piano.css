@@ -7,15 +7,7 @@
  * Good luck! 
  */ 
 
- * { 
-    margin:0px; 
-    padding:0px; 
-    list-style:none; 
-  } 
-  
-  :focus { 
-    outline:none !important; 
-  }  
+ 
   
   
   /* Piano Wrapper */ 
@@ -114,10 +106,10 @@
     box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000; 
   } 
 
-  ul#piano li div.activeCorrect {
+  ul#piano li div.activeCorrect, .activeCorrect {
     background: green;
   }
 
-  ul#piano li div.activeWrong {
+  ul#piano li div.activeWrong, .activeWrong{
     background: red;
   }

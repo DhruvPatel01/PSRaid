@@ -21,7 +21,7 @@ function getTranslation(transform) {
 
 var renderer = new VF.Renderer(document.getElementById('stave'), 
                                VF.Renderer.Backends.SVG);
-renderer.resize(QUEUE_LEN*QUEUE_GAP+10, 400);
+renderer.resize(QUEUE_LEN*QUEUE_GAP+10, 300);
 
 var ctx = renderer.getContext();
 var treble_staff = new VF.Stave(10, 40, QUEUE_LEN*QUEUE_GAP);
@@ -118,9 +118,13 @@ const synth = new Tone.Synth().toMaster();
 var mute_synth = false;
 
 function note_pressed(e) {
-  var note = e.target.id;
+  var note = e.target.dataset.key;
+  if (note.length == 1) {
+    note = note + notes_queue[0].dataset.note[1];
+  }
+
   if (!mute_synth) {
-    synth.triggerAttackRelease(e.target.id, '4n');
+    synth.triggerAttackRelease(note, '4n');
   }
   var correct_ans = notes_queue[0].dataset.note;
   if (note === correct_ans) {
@@ -155,12 +159,23 @@ window.addEventListener('keydown', function(e) {
 })
 
 /**
+ * Follwing code is for simple 7 key keyboard for mobile
+ * devices. Some code is repetative, I have not 
+ * refactored it.
+ */
+var tmp = document.getElementById("simple_layout");
+var tmp = tmp.children;
+for (var i = 0; i < tmp.length; i++) {
+  tmp[i].addEventListener("click", note_pressed);
+}
+
+/**
  * Following code is inspired(copied) from 
  * wonderful article by Jonathan Bergknoff.
  * More info @ https://github.com/jbergknoff/guitar-tuner/
  */
 
-window.addEventListener("load", initialize);
+document.getElementById("start_recording").addEventListener('click', initialize);
 
 var worker = new Worker("js/note_detection_worker.js");
 worker.addEventListener("message", note_detected); //TODO: 
