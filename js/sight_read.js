@@ -141,13 +141,16 @@ function note_pressed(e) {
 
 var piano = document.getElementById('piano');
 var keys = piano.getElementsByClassName('anchor');
+var keys_table = {};
 for (var i = 0; i < keys.length; i++) {
   keys[i].addEventListener('click', note_pressed);
+  keys_table[keys[i].dataset.key] = keys[i];
 }
 
 keys = piano.getElementsByTagName('span');
 for (var i = 0; i < keys.length; i++) {
   keys[i].addEventListener('click', note_pressed);
+  keys_table[keys[i].dataset.key] = keys[i];
 }
 
 window.addEventListener('keydown', function(e) {
@@ -155,7 +158,7 @@ window.addEventListener('keydown', function(e) {
   if (key < 'a' || key > 'g')
     return;
   var octave = notes_queue[0].dataset.note[1];
-  document.getElementById(key.toUpperCase()+octave).click();
+  keys_table[key.toUpperCase()+octave].click();
 })
 
 /**
