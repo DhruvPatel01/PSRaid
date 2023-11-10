@@ -45,3 +45,9 @@
     transform: translate(3px, 3px);
     transition: linear 0.1s;
 }
+
+#practice_keys td {
+    border: 1px solid black;
+    margin: 2px;
+    padding: 5px;
+}
