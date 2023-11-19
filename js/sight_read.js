@@ -8,10 +8,19 @@ notes_queue = Array();
 
 var practiceKeys = document.querySelectorAll('#practice_keys input');
 practiceKeys.forEach(function (input, index) {
+  var saved_value = localStorage.getItem(input.value);
+  if (saved_value !== null) {
+    saved_value = saved_value == "true";
+    input.checked = saved_value;
+    console.log(input.checked);
+  }
+
   if (input.checked) NOTES.push(input.value);
 
   input.addEventListener('change', function () {
     var idx = NOTES.indexOf(input.value);
+    localStorage.setItem(input.value, input.checked);
+
     if (input.checked && idx == -1) {
       NOTES.push(input.value);
       if (notes_queue.length < QUEUE_LEN) 
@@ -21,7 +30,6 @@ practiceKeys.forEach(function (input, index) {
     if (!input.checked && idx > -1) {
       NOTES.splice(idx, 1);
     }
-    console.log(NOTES);
   });
 });
 
