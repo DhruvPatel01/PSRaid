@@ -16,11 +16,19 @@
 
 #stave {
     overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#keyboard-88 {
+    display: flex;
+    justify-content: center;
 }
 
 /* simple mobile friendly keyboard */
 #simple_layout {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
